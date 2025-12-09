@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>VOID STORE - أكبر ستور في الشرق الأوسط</title>
+  <meta name="description" content="VOID STORE - يوزرات، نيترو، سيرفرات، بوتات، هوستينج"/>
+
+  <!-- الفافيكون بتاعك -->
+  <link rel="icon" href="https://i.ibb.co/cKP0sNnR/file-0000000083f0720ab0f99fd3791ccc9f.png" type="image/webp">
+  <link rel="apple-touch-icon" href="https://i.ibb.co/YFgrfRbQ/81129628470b.webp">
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;800;900&display=swap');
+
+    :root {
+      --bg: #0d0d0d;
+      --card: #1a1a1a;
+      --accent: #5865F2;
+      --glow: rgba(88,101,242,0.6);
+    }
+
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body {
+      font-family: 'Cairo', sans-serif;
+      background: var(--bg);
+      color: #fff;
+      overflow-x: hidden;
+      background: radial-gradient(circle at top, #1a1a2e, #0d0d0d);
+    }
+
+    /* أنيميشن الدخول */
+    @keyframes fadeInUp {
+      from { opacity:0; transform:translateY(50px); }
+      to { opacity:1; transform:translateY(0); }
+    }
+    @keyframes float {
+      0%,100% { transform:translateY(0); }
+      50% { transform:translateY(-20px); }
+    }
+    @keyframes pulse {
+      0% { box-shadow:0 0 20px var(--glow); }
+      50% { box-shadow:0 0 50px var(--glow); }
+      100% { box-shadow:0 0 20px var(--glow); }
+    }
+
+    header {
+      background: linear-gradient(135deg, #5865F2, #8b46ff);
+      padding: 3rem 1rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    header::before {
+      content: '';
+      position: absolute;
+      top: -100%; left: -50%;
+      width: 200%; height: 300%;
+      background: radial-gradient(circle, rgba(255,255,255,0.15) 0%, transparent 60%);
+      animation: float 25s infinite linear;
+    }
+
+    .logo-img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      border: 6px solid rgba(255,255,255,0.3);
+      margin-bottom: 1.5rem;
+      animation: float 6s ease-in-out infinite, pulse 4s infinite;
+    }
+
+    h1 {
+      font-size: 4.5rem;
+      font-weight: 900;
+      background: linear-gradient(90deg, #fff, #c8c8ff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: fadeInUp 1.2s ease-out;
+    }
+    .tagline {
+      font-size: 1.8rem;
+      opacity: 0.9;
+      animation: fadeInUp 1.2s ease-out 0.4s both;
+    }
+
+    main { max-width: 1100px; margin: 4rem auto; padding: 0 1rem; }
+
+    .section-title {
+      font-size: 2.5rem;
+      text-align: center;
+      margin: 4rem 0 3rem;
+      color: var(--accent);
+      animation: fadeInUp 1s ease-out;
+    }
+    .section-title::after {
+      content: '';
+      display: block;
+      width: 120px;
+      height: 5px;
+      background: var(--accent);
+      margin: 1rem auto;
+      border-radius: 3px;
+    }
+
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+    .card {
+      background: var(--card);
+      padding: 2rem;
+      border-radius: 18px;
+      border: 1px solid #333;
+      text-align: center;
+      opacity: 0;
+      transform: translateY(40px);
+      animation: fadeInUp 0.8s ease-out forwards;
+    }
+    .card:nth-child(1) { animation-delay: 0.2s; }
+    .card:nth-child(2) { animation-delay: 0.4s; }
+    .card:nth-child(3) { animation-delay: 0.6s; }
+    .card:nth-child(4) { animation-delay: 0.8s; }
+    .card:nth-child(5) { animation-delay: 1.0s; }
+    .card:nth-child(6) { animation-delay: 1.2s; }
+    .card:nth-child(7) { animation-delay: 1.4s; }
+
+    .card:hover {
+      transform: translateY(-15px);
+      border-color: var(--accent);
+      box-shadow: 0 20px 40px rgba(88,101,242,0.25);
+      transition: all 0.4s ease;
+    }
+    .card h3 {
+      color: var(--accent);
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .discord-join {
+      display: block;
+      width: 340px;
+      margin: 4rem auto;
+      padding: 1.4rem;
+      background: var(--accent);
+      color: white;
+      font-size: 1.7rem;
+      font-weight: bold;
+      text-align: center;
+      border-radius: 50px;
+      text-decoration: none;
+      box-shadow: 0 10px 30px rgba(88,101,242,0.5);
+      animation: fadeInUp 1s ease-out 1.6s both;
+    }
+    .discord-join:hover {
+      transform: scale(1.08);
+      box-shadow: 0 20px 50px rgba(88,101,242,0.7);
+    }
+
+    footer {
+      text-align: center;
+      padding: 3rem;
+      background: #000;
+      font-size: 1.1rem;
+    }
+
+    @media (max-width: 600px) {
+      h1 { font-size: 3rem; }
+      .tagline { font-size: 1.4rem; }
+      .logo-img { width: 110px; height: 110px; }
+      .discord-join { width: 90%; font-size: 1.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="https://i.ibb.co/cKP0sNnR/file-0000000083f0720ab0f99fd3791ccc9f.png" alt="VMBL STORE" class="logo-img">
+    <h1>VOID STORE</h1>
+    <p class="tagline">The Biggest Store In Middle East</p>
+  </header>
+
+  <main>
+    <h2 class="section-title">اللي بنقدمه</h2>
+
+    <div class="services">
+      <div class="card"><h3>يوزرات ديسكورد</h3><p>يوزرات نادرة ومميزة بكل الأنواع</p></div>
+      <div class="card"><h3>نيترو لينك 3 شهور</h3><p>نيترو بأفضل الأسعار في السوق</p></div>
+      <div class="card"><h3>إنشاء سيرفرات ديسكورد</h3><p>سيرفرات احترافية جاهزة</p></div>
+      <div class="card"><h3>شحن كريديت ProBot</h3><p>كريديت بأرخص سعر</p></div>
+      <div class="card"><h3>هوستينج بوتات</h3><p>هوست قوي 24/7 بدون توقف</p></div>
+      <div class="card"><h3>مشاريع بوتات جاهزة</h3><p>بوتات مبرمجة ومضمونة</p></div>
+      <div class="card"><h3>أعضاء ديسكورد</h3><p>أعضاء حقيقيين وأونلاين</p></div>
+    </div>
+
+    <h2 class="section-title">طرق الدفع</h2>
+    <div style="text-align:center; font-size:1.8rem; margin:2rem 0; animation:fadeInUp 1s ease-out 1.8s both;">
+      <strong>Instapay • Vodafone Cash • Orange Cash</strong>
+    </div>
+
+    <a href="https://discord.gg/We4SvEeaNr" class="discord-join" target="_blank">
+      انضم لسيرفر VOID STORE
+    </a>
+  </main>
+
+  <footer>
+    <p>© 2025 TheRealVenom. All Rights Reserved</p>
+  </footer>
+
+</body>
+</html>
